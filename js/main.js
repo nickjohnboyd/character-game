@@ -32,7 +32,13 @@ function Character(name, health, image) {
 function Create() {
     let chName = prompt("What would you like to name this character?");
     let chHealth = prompt("How much health would you like this character to have? (0-100)");
-    chHealth = chHealth * 2 + "px";
+    if (chHealth < 0 || chHealth > 100) {
+        chHealth = "200px";
+        alert("Health should be between 0-100. This health will default to 100.");
+    }
+    else {
+        chHealth = chHealth * 2 + "px";    
+    }
     let chImage = charImgs[Math.floor(Math.random() * charImgs.length)];
     let character = chName;
     character = new Character(chName, chHealth, chImage);
