@@ -37,3 +37,5 @@ function Create() {
     let character = chName;
     character = new Character(chName, chHealth, chImage);
 }
+
+//published to github pages
