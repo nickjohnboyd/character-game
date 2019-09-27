@@ -9,6 +9,7 @@ h1 {
 }
 #characterGroup {
     display: flex;
+    flex-wrap: wrap;
 }
 .container {
     display: flex;
